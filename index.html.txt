@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshay Kumar Gupta | Full Stack Developer</title>
+
+    <!-- CSS -->
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            padding: 20px 12%;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #222;
+        }
+
+        .nav-links a:hover {
+            color: #0077ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e0ebff, #ffffff);
+            padding: 50px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            font-weight: 700;
+        }
+
+        .hero span {
+            color: #0066ff;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #444;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #0077ff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #005ad1;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 12%;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section-desc {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Skills */
+        .skills-grid {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            padding: 15px;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            font-weight: 500;
+            border-radius: 8px;
+        }
+
+        /* Projects */
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #444;
+        }
+
+        .project-card .tech {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #eef3ff;
+            color: #0051cc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* Contact */
+        .contact p {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* Fade Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .fade-in.delay {
+            animation-delay: 0.3s;
+        }
+
+        .fade-in.delay2 {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Fix for content under fixed navbar */
+        #home {
+            padding-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .section {
+                padding: 60px 8%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Akshay Gupta</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Hi, I'm <span>Akshay Kumar Gupta</span></h1>
+            <p class="fade-in delay">Java Full Stack Developer | Spring Boot | Angular | Vue.js | Microservices</p>
+            <a href="#projects" class="btn fade-in delay2">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-desc">
+            I am a Full Stack Developer with 3+ years of experience building secure and scalable FinTech applications.
+            I specialize in Java, Spring Boot, Angular/Vue.js, REST APIs, and microservices architecture.
+            I enjoy solving complex engineering challenges, optimizing backend systems, and creating clean and responsive UI designs.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">Java</div>
+            <div class="skill-card">Spring Boot</div>
+            <div class="skill-card">Microservices</div>
+            <div class="skill-card">REST APIs</div>
+            <div class="skill-card">Angular</div>
+            <div class="skill-card">Vue.js</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">TypeScript</div>
+            <div class="skill-card">MySQL</div>
+            <div class="skill-card">Oracle DB</div>
+            <div class="skill-card">Git</div>
+            <div class="skill-card">SonarQube</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-card fade-in">
+            <h3>Enterprise FinTech Platform (US Client)</h3>
+            <p>
+                Built scalable Spring Boot microservices, secured REST APIs, optimized SQL queries,
+                and developed UI components for a high-performance financial platform.
+            </p>
+            <span class="tech">Java · Spring Boot · Microservices · Angular · MySQL</span>
+        </div>
+
+        <div class="project-card fade-in delay">
+            <h3>FinTech Web Platform (Dutch Client)</h3>
+            <p>
+                Enhanced UI responsiveness with Vue.js, developed backend logic, improved MySQL
+                performance, and ensured seamless API communication.
+            </p>
+            <span class="tech">Vue.js · Java · Spring Boot · MySQL</span>
+        </div>
+
+        <div class="project-card fade-in delay2">
+            <h3>European Financial App</h3>
+            <p>
+                Delivered full-stack features using Angular + Spring Boot, optimized database schemas,
+                and improved overall system performance.
+            </p>
+            <span class="tech">Angular · Spring Boot · Oracle DB</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <h2 class="section-title">Contact</h2>
+        <p>Email: akshay.gupta0729@gmail.com</p>
+        <p>LinkedIn: linkedin.com/in/akshaygupta2029</p>
+        <p>Bengaluru, India</p>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scroll
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
